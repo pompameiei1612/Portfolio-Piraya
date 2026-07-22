@@ -1,6 +1,7 @@
-// Smooth scroll animation
+// เลื่อนหน้าเว็บแบบ Smooth
 
 document.querySelectorAll("a").forEach(link => {
+
     link.addEventListener("click", function(e){
 
         const target = document.querySelector(
@@ -8,55 +9,72 @@ document.querySelectorAll("a").forEach(link => {
         );
 
         if(target){
+
             e.preventDefault();
 
             target.scrollIntoView({
-                behavior: "smooth"
+                behavior:"smooth"
             });
+
         }
 
     });
+
 });
 
 
-// Fade in animation เมื่อเลื่อน
 
-const sections = document.querySelectorAll("section");
+
+// Animation ตอนเลื่อนลง
+
+const items = document.querySelectorAll(
+    "section, .card, .box"
+);
+
 
 const observer = new IntersectionObserver(entries => {
 
     entries.forEach(entry => {
 
         if(entry.isIntersecting){
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
+
+            entry.target.classList.add("show");
+
         }
 
     });
 
+},{
+    threshold:0.15
 });
 
 
-sections.forEach(section => {
 
-    section.style.opacity = "0";
-    section.style.transform = "translateY(50px)";
-    section.style.transition = "1s";
+items.forEach(item=>{
 
-    observer.observe(section);
+    item.classList.add("hidden");
+
+    observer.observe(item);
 
 });
 
 
-// ปุ่ม View Portfolio
 
-const button = document.querySelector("button");
 
-button.addEventListener("click", () => {
+// ปุ่มหรือรูปโปรไฟล์เรืองแสง
 
-    document.querySelector("#about")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
+const profile = document.querySelector(".profile img");
+
+
+profile.addEventListener("mouseover",()=>{
+
+    profile.style.transform="scale(1.05)";
+
+});
+
+
+profile.addEventListener("mouseout",()=>{
+
+    profile.style.transform="scale(1)";
 
 });
