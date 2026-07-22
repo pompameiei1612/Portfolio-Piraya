@@ -355,3 +355,62 @@ h2 {
 
 
 }
+.certificate-grid {
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:30px;
+
+}
+
+
+
+.cert {
+
+background:white;
+
+padding:20px;
+
+border-radius:25px;
+
+border:1px solid #d4af37;
+
+box-shadow:
+0 0 25px #7cffb2;
+
+transition:.4s;
+
+}
+
+
+
+.cert:hover {
+
+transform:translateY(-10px);
+
+}
+
+
+
+.cert img {
+
+width:100%;
+
+border-radius:15px;
+
+}
+
+
+
+.cert p {
+
+margin-top:15px;
+
+font-size:20px;
+
+color:#164d35;
+
+}
