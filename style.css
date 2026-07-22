@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "Sarabun", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #071a12;
+    color: white;
+}
+
+
+/* NAVBAR */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+    background: rgba(7,26,18,0.75);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+}
+
+.logo {
+    color: #d4af37;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px 8%;
+}
+
+
+.hero-text {
+    max-width: 600px;
+}
+
+
+.gold {
+    color: #d4af37;
+    letter-spacing: 5px;
+}
+
+
+.hero h2 {
+    font-size: 70px;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+
+.hero p {
+    color: #d6d6d6;
+    font-size: 18px;
+}
+
+
+button {
+    margin-top: 30px;
+    padding: 15px 40px;
+    border-radius: 50px;
+    border: 1px solid #d4af37;
+    background: transparent;
+    color: #d4af37;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+
+button:hover {
+    background: #d4af37;
+    color: #071a12;
+}
+
+
+/* PROFILE */
+
+.circle {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 3px solid #d4af37;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 50px rgba(212,175,55,.4);
+    animation: float 4s infinite ease-in-out;
+}
+
+
+.circle span {
+    color: #d4af37;
+    text-align: center;
+}
+
+
+@keyframes float {
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+/* SECTION */
+
+section {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+
+section h2 {
+    font-size: 45px;
+    color: #d4af37;
+    margin-bottom: 30px;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+.card {
+    width: 300px;
+    padding: 35px;
+    background: rgba(255,255,255,.05);
+    border-radius: 25px;
+    border: 1px solid rgba(212,175,55,.3);
+    transition: .4s;
+}
+
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+}
+
+
+.card h3 {
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #aaa;
+}
